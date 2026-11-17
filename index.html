@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagor Chandra Howlader — Software Engineer</title>
+  <meta name="description" content="Portfolio of Sagor Chandra Howlader, a Computer Science & Engineering graduate specializing in software development, web technologies, and systems.">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    } catch {
+      document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+  </script>
+  
+  <!-- Favicon & Fonts -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="siteNav">
+    <div class="wrap nav-inner">
+      <a href="#hero" class="logo">iamsagorhowlader<span class="cursor">_</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <span class="status-pill"><span class="status-dot"></span>Open to work</span>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Dark mode</span>
+        </button>
+        <button class="glass-toggle" id="glassToggle" type="button" aria-pressed="false">Glass: off</button>
+          <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="wrap hero-grid">
+        
+        <div class="about-profile-frame">
+          <div class="profile-img-wrapper" id="profileWrapper">
+            <img 
+              src="Profile.jpg" 
+              alt="Sagor Chandra Howlader" 
+              class="profile-img"
+              id="profileImg"
+              loading="eager"
+              decoding="async"
+            >
+          </div>
+          <div class="social-row profile-social-row" role="group" aria-label="Contact and social links">
+            <a href="tel:+8801792861244" aria-label="Phone">
+              <svg class="social-icon icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2.8 9.4 2a1.7 1.7 0 0 1 2 1l1.2 3.1a1.7 1.7 0 0 1-.5 1.9l-1.7 1.4a14.4 14.4 0 0 0 4.2 4.2l1.4-1.7a1.7 1.7 0 0 1 1.9-.5l3.1 1.2a1.7 1.7 0 0 1 1 2l-.8 2.8a2.2 2.2 0 0 1-2.2 1.6C10.1 18.8 5.2 13.9 5 8.1a2.2 2.2 0 0 1 1.6-2.2Z"/></svg>
+              <span>Phone</span>
+            </a>
+            <a href="https://wa.me/8801792861244" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg class="social-icon icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23.5l6-1.6A11.8 11.8 0 0 0 20.5 3.5ZM12 21a9.7 9.7 0 0 1-4.9-1.3l-.4-.2-3.6 1 1-3.5-.2-.4A9.7 9.7 0 1 1 12 21Zm5.3-7.3c-.3-.2-1.7-.9-2-.9s-.5-.2-.7.2-.8.9-1 1.1-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.2-.7l.5-.6.2-.6-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4a11.5 11.5 0 0 0 4.4 3.9c.6.3 1.1.4 1.5.6.6.2 1.2.2 1.7.1.5-.1 1.7-.7 1.9-1.4.3-.7.3-1.3.2-1.4s-.2-.2-.5-.4Z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:sagorchandrahowlader@gmail.com" aria-label="Email">
+              <svg class="social-icon icon-email" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm9 7.2L20.5 7h-17l8.5 5.2Zm0 2.3L3 8.9V17h18V8.9l-9 5.6Z"/></svg>
+              <span>Email</span>
+            </a>
+            <a href="https://www.instagram.com/iamsagorhowlader/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="social-icon icon-instagram" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/iamsagorhowlader" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg class="social-icon icon-facebook" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.8 1.8-1.8h1.9V2.4c-.9-.1-1.8-.2-2.7-.2-2.7 0-4.6 1.7-4.6 4.8v2.5H7V13h2.9v9h3.6Z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <span class="profile-link-placeholder" role="img" aria-label="LinkedIn profile URL to be added" title="LinkedIn profile URL to be added">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3.5 9h3.4v11H3.5V9Zm5.5 0h3.3v1.5h.1A3.6 3.6 0 0 1 15.7 8c3.5 0 4.2 2.3 4.2 5.2V20h-3.4v-6c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V20H9V9Z"/></svg>
+              <span>LinkedIn</span>
+            </span>
+            <span class="profile-link-placeholder" role="img" aria-label="GitHub profile URL to be added" title="GitHub profile URL to be added">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-5A3.9 3.9 0 0 1 6.7 8.8c-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.8 1.1a9.7 9.7 0 0 1 5.1 0c2-1.4 2.8-1.1 2.8-1.1.6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1.1 2.7c0 3.9-2.3 4.7-4.5 5 .4.3.7.9.7 1.8V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
+              <span>GitHub</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow"><span class="status-dot"></span> SOFTWARE ENGINEER · OPEN TO WORK</p>
+          <h1>Sagor Chandra Howlader</h1>
+          <p class="role">Software &amp; Systems Engineer</p>
+          <p class="bio">
+            I hold a B.Sc. in Computer Science &amp; Engineering from the University of Global Village. I enjoy solving real-world challenges through web application development, embedded hardware integrations, and IT infrastructure management.
+          </p>
+          
+          <div class="cta-row">
+            <a href="#contact" class="btn btn-primary">Send a message</a>
+            <a href="#projects" class="btn btn-ghost">View projects</a>
+            <a href="Resume%20CV.pdf" class="btn btn-ghost" download="Resume CV.pdf">Download CV <span aria-hidden="true">↓</span></a>
+          </div>
+          
+        </div>
+
+        <aside class="term-card reveal" aria-label="Location and availability">
+          <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">location.txt</span></div>
+          <div class="term-body">
+            <span class="term-label">BASED IN</span>
+            <strong>Gazipur, Bangladesh</strong>
+            <span class="term-label">CURRENT STATUS</span>
+            <strong class="out">Available for opportunities</strong>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">// about me</p>
+          <h2 class="section-title">Engineering Background</h2>
+        </div>
+
+        <div class="about-stats-grid reveal">
+          <div class="stat-card"><div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">academic-gpa.txt</span></div><span class="stat-number">3.63</span><span class="stat-label">Cumulative GPA</span></div>
+          <div class="stat-card"><div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">qualification.txt</span></div><span class="stat-number">B.Sc.</span><span class="stat-label">CSE Graduate · UGV</span></div>
+          <div class="stat-card"><div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">projects.txt</span></div><span class="stat-number">10+</span><span class="stat-label">Projects &amp; Hardware Systems</span></div>
+        </div>
+
+        <div class="about-bio-container reveal">
+          <p class="bio-paragraph">
+            I am a Computer Science &amp; Engineering graduate specializing in modern frontend architecture, embedded systems integrations, and IT infrastructure management. My engineering philosophy centers on writing clean, scalable code while maintaining a deep understanding of hardware-level mechanics.
+          </p>
+          <p class="bio-paragraph">
+            I also bring hands-on experience diagnosing hardware, software, and network issues, maintaining systems, and supporting end users. I focus on practical troubleshooting, reliable systems, and clear technical support.
+          </p>
+        </div>
+
+        <div class="skills-progress-section reveal">
+          <div class="skills-category">
+            <span class="category-title">// engineering &amp; web</span>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-header"><span class="skill-name">JavaScript (ES6+)</span><span class="skill-percent">85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header"><span class="skill-name">HTML5 / CSS3</span><span class="skill-percent">90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <span class="category-title">// systems &amp; embedded</span>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-header"><span class="skill-name">Computer Networking</span><span class="skill-percent">80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-width="80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header"><span class="skill-name">Arduino &amp; Sensors</span><span class="skill-percent">85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <span class="category-title">// additional skills</span>
+            <div class="tag-row skill-tags">
+              <span class="tag tag-sm">C</span>
+              <span class="tag tag-sm">C++</span>
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">IT Support</span>
+              <span class="tag tag-sm">Computer Troubleshooting</span>
+              <span class="tag tag-sm">Microsoft Office</span>
+              <span class="tag tag-sm">Canva Graphic Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="credentials-grid reveal">
+          <article class="credential-card">
+            <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">certifications.txt</span></div>
+            <div class="credential-body">
+              <h3 class="category-title">Certifications &amp; Courses</h3>
+              <ul class="credential-list">
+                <li><strong>IT Support</strong><span>University of Global Village (IQAC)</span></li>
+                <li><strong>Intensive English Language Course-I</strong><span>University of Global Village (IQAC)</span></li>
+              </ul>
+            </div>
+          </article>
+          <article class="credential-card">
+            <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">languages.txt</span></div>
+            <div class="credential-body">
+              <h3 class="category-title">Languages</h3>
+              <ul class="credential-list language-list">
+                <li><strong>Bangla</strong><span>Native</span></li>
+                <li><strong>English</strong><span>Fluent</span></li>
+                <li><strong>Hindi</strong><span>Conversational</span></li>
+              </ul>
+            </div>
+          </article>
+          <article class="credential-card availability-card">
+            <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">availability.txt</span></div>
+            <div class="credential-body">
+              <h3 class="category-title">Availability</h3>
+              <p>Available for full-time, remote, hybrid, or on-site roles, with flexibility to relocate.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">// experience</p>
+          <h2 class="section-title">Leadership &amp; Experience</h2>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card reveal">
+            <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">president.role</span></div>
+            <div class="experience-body">
+              <div class="entry-header">
+                <div>
+                  <h3 class="entry-role">President</h3>
+                  <span class="entry-company">UGV Programming Club</span>
+                </div>
+                <span class="date-badge">Summer 2024</span>
+              </div>
+              <ul class="entry-bullets">
+                <li>Organized programming contests from planning through result publication, including competition formats and problem sets.</li>
+                <li>Coordinated judges, volunteers, and participants to run events smoothly and encourage student engagement.</li>
+              </ul>
+              <div class="tag-row entry-tags">
+                <span class="tag tag-sm">Leadership</span>
+                <span class="tag tag-sm">Event Management</span>
+                <span class="tag tag-sm">Mentorship</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">general-secretary.role</span></div>
+            <div class="experience-body">
+              <div class="entry-header">
+                <div>
+                  <h3 class="entry-role">General Secretary</h3>
+                  <span class="entry-company">UGV Programming Club</span>
+                </div>
+                <span class="date-badge">Winter 2024</span>
+              </div>
+              <ul class="entry-bullets">
+                <li>Coordinated club events, meetings, and initiatives, keeping activities on schedule and aligned with objectives.</li>
+                <li>Managed official communications and records, delegated work with committees and volunteers, and supported member engagement.</li>
+              </ul>
+              <div class="tag-row entry-tags">
+                <span class="tag tag-sm">Operations</span>
+                <span class="tag tag-sm">Documentation</span>
+                <span class="tag tag-sm">Communication</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">// projects</p>
+          <h2 class="section-title">Selected Projects</h2>
+        </div>
+        <article class="featured-project reveal">
+          <div class="project-bar"><div class="project-dots"><span></span><span></span><span></span></div><span class="project-file">rfid-attendance.ino</span></div>
+          <div class="featured-art" role="img" aria-label="Illustration of an RFID attendance system with a card reader, student card, and attendance record">
+            <span class="art-kicker">EMBEDDED SYSTEMS · 01</span>
+            <svg class="rfid-illustration" viewBox="0 0 620 390" aria-hidden="true">
+              <defs>
+                <linearGradient id="readerFill" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#4867ed"/><stop offset="1" stop-color="#253cb3"/></linearGradient>
+                <linearGradient id="cardFill" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#e8e9e3"/></linearGradient>
+              </defs>
+              <circle cx="310" cy="192" r="152" fill="none" stroke="currentColor" stroke-opacity=".1" stroke-width="1"/>
+              <circle cx="310" cy="192" r="112" fill="none" stroke="currentColor" stroke-opacity=".12" stroke-width="1" stroke-dasharray="5 8"/>
+              <rect x="88" y="96" width="190" height="222" rx="28" fill="url(#readerFill)"/>
+              <rect x="107" y="116" width="152" height="180" rx="18" fill="#121a38" fill-opacity=".72"/>
+              <path d="M133 184c16-21 44-21 60 0M147 199c8-10 23-10 31 0M159 213h8" fill="none" stroke="#a9b7ff" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="164" cy="252" r="10" fill="#67d69a"/>
+              <g class="rfid-student-card">
+                <rect x="319" y="88" width="211" height="134" rx="18" transform="rotate(8 319 88)" fill="url(#cardFill)"/>
+                <rect x="348" y="123" width="42" height="31" rx="6" transform="rotate(8 348 123)" fill="#e8b23d"/>
+                <path d="m357 126 22 3m-23 8 22 3m-23 7 22 3" stroke="#9a7013" stroke-width="2"/>
+                <circle cx="470" cy="155" r="24" fill="#dce3ff"/>
+                <path d="M451 193c4-17 35-17 39 0" fill="#b9c6ff"/>
+                <path d="M414 185h45" stroke="#3452e1" stroke-opacity=".28" stroke-width="7" stroke-linecap="round"/>
+                <path d="M420 201h32" stroke="#3452e1" stroke-opacity=".18" stroke-width="6" stroke-linecap="round"/>
+              </g>
+              <rect x="340" y="250" width="195" height="80" rx="15" fill="#fff" fill-opacity=".92"/>
+              <circle cx="365" cy="278" r="8" fill="#2fae66"/>
+              <path d="M386 276h114M358 303h114M480 303h29" stroke="#25303f" stroke-opacity=".18" stroke-width="7" stroke-linecap="round"/>
+              <g class="rfid-scan-waves" fill="none" stroke="#d14e23" stroke-width="3" stroke-linecap="round">
+                <path d="M278 209c16-8 25-8 41 0m-44 18c23-13 36-13 57 0m-62 20c27-17 49-17 72 0" opacity=".8"/>
+              </g>
+            </svg>
+            <span class="art-caption">SCAN · VERIFY · RECORD</span>
+          </div>
+          <div class="featured-copy">
+            <p class="eyebrow">FEATURED PROJECT</p>
+            <h3 class="featured-title">RFID Smart Attendance System</h3>
+            <p class="featured-summary">An Arduino-based attendance platform that reads RFID cards and automates attendance tracking.</p>
+            <div class="case-study-grid">
+              <div><span class="case-label">THE PROBLEM</span><p>Manual attendance takes time and makes it harder to keep consistent records.</p></div>
+              <div><span class="case-label">WHAT I BUILT</span><p>A card-based check-in flow using an RFID reader and Arduino hardware.</p></div>
+              <div><span class="case-label">TOOLS</span><p>Arduino · RFID · C/C++</p></div>
+              <div><span class="case-label">RESULT</span><p>Automated card scanning and attendance capture for the project workflow.</p></div>
+            </div>
+            <p class="project-link-note">Project links can be added when a repository or demo is available.</p>
+          </div>
+        </article>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-bar"><div class="project-dots"><span></span><span></span><span></span></div><span class="project-file">reaction-checker.java</span></div>
+            <div class="mini-project-art reaction-art" role="img" aria-label="Illustration of a reaction-time test countdown and response light">
+              <span class="mini-project-label">REACTION TEST / READY</span>
+              <div class="reaction-display"><span>00.248</span><i></i></div>
+              <div class="reaction-track"><span></span></div>
+            </div>
+            <div class="project-body">
+              <p class="eyebrow">DESKTOP · JAVA</p>
+              <h3 class="project-title">Human Reaction Checker App</h3>
+              <p class="project-desc">A desktop utility that measures and displays a user's reaction speed.</p>
+              <div class="tag-row"><span class="tag tag-sm">Java</span><span class="tag tag-sm">Algorithms</span><span class="tag tag-sm">GUI</span></div>
+              <span class="project-link-note">Repository or demo link to be added</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-bar"><div class="project-dots"><span></span><span></span><span></span></div><span class="project-file">line-follower.ino</span></div>
+            <div class="mini-project-art car-art" role="img" aria-label="Illustration of a line-following robot and its infrared path">
+              <span class="mini-project-label">AUTONOMOUS ROBOT / TRACK</span>
+              <div class="robot-track"><span></span><span></span><span></span></div>
+              <div class="robot-car"><i></i><i></i><b></b></div>
+              <div class="sensor-label">IR SENSOR ARRAY</div>
+            </div>
+            <div class="project-body">
+              <p class="eyebrow">ROBOTICS · ARDUINO</p>
+              <h3 class="project-title">Line Following Car</h3>
+              <p class="project-desc">An Arduino robot using infrared sensors and motor drivers to follow a marked track.</p>
+              <div class="tag-row"><span class="tag tag-sm">Embedded Systems</span><span class="tag tag-sm">Robotics</span><span class="tag tag-sm">Arduino</span></div>
+              <span class="project-link-note">Repository or demo link to be added</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">// education</p>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <div class="edu-list reveal">
+          <article class="edu-item">
+            <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">bachelors-degree.txt</span></div>
+            <div class="edu-body">
+              <h3 class="project-title edu-degree">Bachelor of Science in CSE</h3>
+              <p class="project-desc edu-school">University of Global Village (UGV)</p>
+              <div class="edu-result">
+                <span class="edu-date">Graduated: 2025</span>
+                <span class="edu-date">CGPA: 3.63</span>
+              </div>
+            </div>
+          </article>
+          <article class="edu-item">
+            <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">higher-secondary.txt</span></div>
+            <div class="edu-body">
+              <h3 class="project-title edu-degree">Higher Secondary Certificate (HSC)</h3>
+              <p class="project-desc edu-school">Gazipur City College</p>
+              <p class="project-desc edu-school">Major: Science</p>
+              <div class="edu-result">
+                <span class="edu-date">Passed: 2020</span>
+                <span class="edu-date">GPA: 4.25</span>
+              </div>
+            </div>
+          </article>
+          <article class="edu-item">
+            <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">secondary-school.txt</span></div>
+            <div class="edu-body">
+              <h3 class="project-title edu-degree">Secondary School Certificate (SSC)</h3>
+              <p class="project-desc edu-school">T &amp; T Adarsha High School</p>
+              <p class="project-desc edu-school">Major: Science</p>
+              <div class="edu-result">
+                <span class="edu-date">Passed: 2018</span>
+                <span class="edu-date">GPA: 4.28</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">// contact</p>
+        <h2 class="section-title reveal">Let’s work together</h2>
+        <p class="contact-lead reveal">Have an opportunity or project in mind? Tell me about it and I’ll get back to you.</p>
+        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/sagorchandrahowlader@gmail.com" data-endpoint="https://formsubmit.co/ajax/sagorchandrahowlader@gmail.com" method="post">
+          <input type="hidden" name="_subject" value="Portfolio contact message">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="project-bar"><div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div><span class="project-file">contact-form.html</span></div>
+          <div class="contact-form-heading">
+            <span class="contact-form-kicker">START A CONVERSATION</span>
+            <h3>What can I help you build?</h3>
+            <p>Share a few details and I’ll reply to your email.</p>
+          </div>
+          <div class="contact-form-grid">
+            <label class="form-field">
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label class="form-field">
+              <span>Email address</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label class="form-field form-field-wide">
+              <span>Subject</span>
+              <input type="text" name="subject" required>
+            </label>
+            <label class="form-field form-field-wide">
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+          </div>
+          <div class="contact-form-footer">
+            <p class="form-status" id="contactFormStatus" role="status" aria-live="polite">Messages are sent via FormSubmit. First use may require email verification.</p>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </div>
+        </form>
+        <div class="contact-alternatives reveal" role="group" aria-label="Other ways to contact me">
+          <span>Prefer another way?</span>
+          <a href="mailto:sagorchandrahowlader@gmail.com">Email</a>
+          <a href="tel:+8801792861244">Call</a>
+          <a href="https://wa.me/8801792861244" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+        <p class="contact-email reveal">sagorchandrahowlader@gmail.com</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Sagor Chandra Howlader. Built with care.</p>
+      <a href="#hero" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <a class="facebook-float" href="https://www.facebook.com/iamsagorhowlader" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook profile: iamsagorhowlader">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.8 1.8-1.8h1.9V2.4c-.9-.1-1.8-.2-2.7-.2-2.7 0-4.6 1.7-4.6 4.8v2.5H7V13h2.9v9h3.6Z"/></svg>
+    <span>iamsagorhowlader</span>
+  </a>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
